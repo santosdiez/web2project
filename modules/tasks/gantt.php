@@ -333,9 +333,9 @@ for ($i = 0, $i_cmp = count($gantt_arr); $i < $i_cmp; $i++) {
             $cap = '';
         }
 
-        if ($showLabels == '1') {
-            $res = $task->getAssignedUsers($task_id);
-            foreach ($res as $rw) {				
+        if ($showLabels == '1') {	
+            $res = $task->getAssignedUsers($a['task_id']);        
+            foreach ($res as $rw) {							
 				switch ($rw['perc_assignment']) {
 					case 100:
 						$caption .= $rw['user_username'] . ';';
