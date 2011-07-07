@@ -1094,6 +1094,7 @@ function projects_list_data($user_id = false) {
         tp.task_log_problem, user_username, project_active');
 
 	$fields = w2p_Core_Module::getSettings('projects', 'index_list');
+	unset($fields['department_list']);  // added as an alias below
 	foreach ($fields as $field => $text) {
 		$q->addQuery($field);
 	}
